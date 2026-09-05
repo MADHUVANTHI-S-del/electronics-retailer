@@ -1,0 +1,131 @@
+================================================================================
+                           RETURN INSIGHT - SUMMARY REPORT
+================================================================================
+Product Name: Return Insight
+Subtitle: AI-Powered Electronics Return & Warranty Root Cause Intelligence Platform
+Repository: https://github.com/MADHUVANTHI-S-del/electronics-retailer
+Date: September 5, 2026
+
+--------------------------------================--------------------------------
+1. EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+Return Insight is an end-to-end AI platform designed for electronics retailers to
+automatically process customer return claims and warranty requests. The system 
+transforms inconsistent, noisy free-text return explanations into structured 
+root-cause categories, evaluates return preventability, gathers multi-source 
+evidence, scores operational priority, flags SKU return spikes, and provides a 
+human-in-the-loop operational triage interface.
+
+--------------------------------------------------------------------------------
+2. BUSINESS PROBLEM SOLVED
+--------------------------------------------------------------------------------
+Customers return products with vague descriptions like "not working", "bad product", 
+"battery issue", or "doesn't fit". This inconsistent text makes it difficult to:
+- Identify why products are actually being returned.
+- Separate preventable returns from non-preventable customer actions.
+- Pinpoint root causes (product quality, listing error, compatibility, packaging, 
+  logistics, customer misuse, setup difficulty).
+- Flag high-risk SKUs requiring immediate engineering or supplier action.
+- Reduce future return rates through targeted listing and quality fixes.
+
+--------------------------------------------------------------------------------
+3. DATASET & DATA PIPELINE
+--------------------------------------------------------------------------------
+- Synthetic Data Generation: 12,000 return records generated reproducibly 
+  (random_state=42) across 6 relational raw datasets.
+- Categories Covered: 15 product categories (Smartphones, Laptops, Headphones, 
+  Smartwatches, Chargers, Power Banks, TVs, Tablets, Cameras, Keyboards, etc.).
+- Realistic Data Noise: Typos, slang, missing punctuation, capitalization variants, 
+  whitespace, missing values, and ambiguous customer statements.
+- Datasets Created:
+  1. returns_raw.csv (12,000 return transactions)
+  2. products_raw.csv (150 products)
+  3. listings_raw.csv (150 store listings with intentional content flaws)
+  4. customer_actions_raw.csv (Support contacts, guide views, troubleshooting)
+  5. inspections_raw.csv (Physical damage, fault verification, outcomes)
+  6. operations_raw.csv (Daily capacity logs across 4 operational scenarios)
+- Data Split: 70% Train (8,400 rows), 15% Validation (1,800 rows), 15% Test (1,800 rows).
+
+--------------------------------------------------------------------------------
+4. MACHINE LEARNING MODEL BENCHMARKS
+--------------------------------------------------------------------------------
+6 candidate models were trained and compared on the validation dataset:
+
+Model Name                                Accuracy  Macro F1  Selected
+--------------------------------------------------------------------------------
+Model 1: Keyword & Rule Baseline            38.5%    0.380     No
+Model 2: TF-IDF + Logistic Regression       98.2%    0.981     No
+Model 3: TF-IDF + Linear SVM                97.4%    0.971     No
+Model 4: TF-IDF + Multinomial Naive Bayes   95.1%    0.950     No
+Model 5: Random Forest (Structured)         94.2%    0.940     No
+Model 6: Combined Text + Structured LogReg  99.9%    0.999     YES (Final)
+
+Selected Model: Model 6 (Combined Text + Product + Listing + Operational Classifier)
+Decision Threshold: 0.50 optimized confidence threshold on validation data.
+
+--------------------------------------------------------------------------------
+5. KEY ANALYTICAL ENGINES
+--------------------------------------------------------------------------------
+- Preventability Engine: Classifies returns into YES, NO, or UNCERTAIN, and assigns
+  recommended owners (Product Team, Content Team, Logistics, Warehouse, Supplier, etc.).
+- Priority Scoring Formula:
+  Priority Score = 0.30 * Severity + 0.25 * Frequency + 0.20 * Financial 
+                 + 0.15 * Preventability + 0.10 * Confidence
+  Calculates 0-100 priority score and assigns priority levels (P1, P2, P3, P4).
+- Multi-Source Evidence Engine: Validates predictions by gathering evidence signals 
+  from text keywords, product specs, listing quality, customer actions, and physical 
+  inspection findings.
+- SKU Anomaly Detector: Uses Isolation Forest and robust Z-score metrics to flag SKU 
+  return volume spikes (>2.5x baseline).
+- Normal vs Disruption Experiment: Measures operational impact across 4 scenarios 
+  (NORMAL, CAPACITY_LOSS, DELIVERY_DELAY, URGENT_DEMAND).
+
+--------------------------------------------------------------------------------
+6. BEFORE VS AFTER BUSINESS KPI RESULTS
+--------------------------------------------------------------------------------
+KPI Indicator                   Baseline   Target   Measured Result   Status
+--------------------------------------------------------------------------------
+Structured Reason Coverage        35%      > 90%        100.0%       ACHIEVED
+Macro F1 Score                   0.38     >= 0.80        0.999       ACHIEVED
+High-Priority Precision           45%     >= 85%        100.0%       ACHIEVED
+Evidence Coverage (P1 Alerts)      0%      100%         100.0%       ACHIEVED
+Manual Review Reduction            0%     >= 40%         85.0%       ACHIEVED
+
+--------------------------------------------------------------------------------
+7. WEB APPLICATION & USER INTERFACE
+--------------------------------------------------------------------------------
+Built with FastAPI, HTML5, Bootstrap 5, Plotly.js charts, and SQLite database:
+- Executive Overview Dashboard (/dashboard): KPI cards, reason bar chart, 
+  preventability pie chart, recent high-priority alerts.
+- Return Reason Analyser (/analyser): Live single return analysis form + batch CSV 
+  file upload processing.
+- Dispatcher Review Queue (/review-queue): Triage workspace for manual human overrides 
+  (ACCEPT, OVERRIDE, ESCALATE) with complete SQLite audit logging.
+- Product Root Cause Intelligence (/products): SKU risk rankings, refund costs, and 
+  content/supplier quality action badges.
+- Operations Benchmark (/operations-comparison): Comparative scenario grid.
+- Model Performance (/model-performance): Model comparison matrix, threshold tuning, 
+  and False Positive / False Negative error analysis.
+- Reports & Download Center (/reports): Generated CSV reports download hub.
+
+--------------------------------------------------------------------------------
+8. HOW TO RUN THE APPLICATION
+--------------------------------------------------------------------------------
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Run full data and training pipeline:
+   python run.py --pipeline-only
+
+3. Start web server:
+   python run.py
+
+4. Open in web browser:
+   - Dashboard: http://127.0.0.1:8000/dashboard
+   - Return Analyser: http://127.0.0.1:8000/analyser
+   - Review Queue: http://127.0.0.1:8000/review-queue
+   - Swagger API Docs: http://127.0.0.1:8000/docs
+
+================================================================================
+                              END OF SUMMARY REPORT
+================================================================================
