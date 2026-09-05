@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Return Insight{% endblock %}</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="/static/css/style.css" rel="stylesheet">
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <div class="brand">
+      <i class="fa-solid fa-box-open text-primary me-2"></i>Return Insight
+    </div>
+    <div class="nav flex-column mt-3">
+      <a href="/dashboard" class="nav-link {% if active_page == 'dashboard' %}active{% endif %}">
+        <i class="fa-solid fa-chart-line"></i> Dashboard
+      </a>
+      <a href="/returns" class="nav-link {% if active_page == 'returns' %}active{% endif %}">
+        <i class="fa-solid fa-list-check"></i> Returns List
+      </a>
+      <a href="/analyser" class="nav-link {% if active_page == 'analyser' %}active{% endif %}">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> Return Analyser
+      </a>
+      <a href="/alerts" class="nav-link {% if active_page == 'alerts' %}active{% endif %}">
+        <i class="fa-solid fa-triangle-exclamation"></i> Alerts Feed
+      </a>
+      <a href="/review-queue" class="nav-link {% if active_page == 'review' %}active{% endif %}">
+        <i class="fa-solid fa-user-gear"></i> Review Queue
+      </a>
+      <a href="/products" class="nav-link {% if active_page == 'products' %}active{% endif %}">
+        <i class="fa-solid fa-microchip"></i> Product Intelligence
+      </a>
+      <a href="/operations-comparison" class="nav-link {% if active_page == 'operations' %}active{% endif %}">
+        <i class="fa-solid fa-sliders"></i> Operations Benchmark
+      </a>
+      <a href="/model-performance" class="nav-link {% if active_page == 'model_performance' %}active{% endif %}">
+        <i class="fa-solid fa-brain"></i> Model Performance
+      </a>
+      <a href="/reports" class="nav-link {% if active_page == 'reports' %}active{% endif %}">
+        <i class="fa-solid fa-file-export"></i> Reports & Export
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content View -->
+  <div class="main-content">
+    {% block content %}{% endblock %}
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

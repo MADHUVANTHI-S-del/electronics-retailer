@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Overview Dashboard - Return Insight{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <h3 class="fw-bold m-0">Return Root Cause Intelligence</h3>
+    <p class="text-muted m-0">AI-Powered Electronics Return & Warranty Root Cause Analysis</p>
+  </div>
+  <div>
+    <a href="/analyser" class="btn btn-primary"><i class="fa-solid fa-plus me-1"></i> Analyse Return</a>
+  </div>
+</div>
+
+<!-- KPI Cards Grid -->
+<div class="row g-3 mb-4">
+  <div class="col-md-3">
+    <div class="kpi-card">
+      <div class="kpi-title">Total Returns</div>
+      <div class="kpi-value">{{ kpis.total_returns }}</div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="kpi-card">
+      <div class="kpi-title">Preventable Return %</div>
+      <div class="kpi-value text-success">{{ kpis.preventable_pct }}%</div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="kpi-card">
+      <div class="kpi-title">High Priority Alerts</div>
+      <div class="kpi-value text-danger">{{ kpis.high_priority_count }}</div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="kpi-card">
+      <div class="kpi-title">Review Queue Size</div>
+      <div class="kpi-value text-warning">{{ kpis.manual_review_count }}</div>
+    </div>
+  </div>
+</div>
+
+<!-- Charts Section -->
+<div class="row g-3 mb-4">
+  <div class="col-md-7">
+    <div class="card card-custom p-3">
+      <h6 class="fw-bold mb-3">Structured Return Reason Distribution</h6>
+      <div id="reasonChart" style="height: 320px;"></div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="card card-custom p-3">
+      <h6 class="fw-bold mb-3">Preventability Breakdown</h6>
+      <div id="preventableChart" style="height: 320px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Recent High Priority Alerts -->
+<div class="card card-custom">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <span class="fw-bold"><i class="fa-solid fa-bell text-danger me-2"></i>Recent High-Priority Operational Alerts</span>
+    <a href="/alerts" class="btn btn-sm btn-outline-secondary">View All</a>
+  </div>
+  <div class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle m-0">
+        <thead class="table-light">
+          <tr>
+            <th>Priority</th>
+            <th>SKU</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for alt in recent_alerts %}
+          <tr>
+            <td><span class="badge badge-p1">{{ alt.priority }}</span></td>
+            <td class="fw-bold">{{ alt.sku }}</td>
+            <td>{{ alt.title }}</td>
+            <td class="text-muted small">{{ alt.description }}</td>
+            <td><span class="badge bg-success">{{ alt.status }}</span></td>
+          </tr>
+          {% else %}
+          <tr>
+            <td colspan="5" class="text-center py-3 text-muted">No active high-priority alerts.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+  const reasonData = {{ reason_counts_json|safe }};
+  const prevData = {{ prev_counts_json|safe }};
+
+  // Plot 1: Reason Bar Chart
+  Plotly.newPlot('reasonChart', [{
+    x: Object.keys(reasonData),
+    y: Object.values(reasonData),
+    type: 'bar',
+    marker: { color: '#3b82f6' }
+  }], { margin: { t: 10, b: 80, l: 40, r: 20 } });
+
+  // Plot 2: Preventability Pie Chart
+  Plotly.newPlot('preventableChart', [{
+    labels: Object.keys(prevData),
+    values: Object.values(prevData),
+    type: 'pie',
+    marker: { colors: ['#10b981', '#64748b', '#f59e0b'] }
+  }], { margin: { t: 10, b: 20, l: 20, r: 20 } });
+</script>
+{% endblock %}

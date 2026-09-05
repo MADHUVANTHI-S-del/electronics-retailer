@@ -1,0 +1,7 @@
+Model,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Training Time,Prediction Time,Interpretability,Selected
+Model 1: Keyword Baseline,0.525,0.7499,0.5008,0.5298,0.5802,0.001,0.016,High (Rules),False
+Model 2: TF-IDF + Logistic Regression,0.9989,0.9996,0.996,0.9977,0.9989,0.086,0.0,High (Linear),False
+Model 3: TF-IDF + Linear SVM,1.0,1.0,1.0,1.0,1.0,0.045,0.002,Medium (SVM),False
+Model 4: TF-IDF + Naive Bayes,0.9983,0.9994,0.9939,0.9965,0.9983,0.017,0.0,High (Probabilistic),False
+Model 5: Random Forest Structured,1.0,1.0,1.0,1.0,1.0,1.163,0.031,Medium (Feature Importance),False
+Model 6: Combined Text + Structured (Final),0.9994,0.9992,0.9992,0.9992,0.9994,0.2,0.0,High (Linear Coefficients),True

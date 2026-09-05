@@ -1,0 +1,151 @@
+sku,product_name,brand,product_category,subcategory,model,price,warranty_months,launch_date,weight,colour,battery_capacity,connector_type,operating_system,compatibility,supplier_id,packaging_type
+SKU-SMA-1001,SonicWave Smartphone 101,SonicWave,Smartphones,Smartphones Standard,MOD-2001,44.64,24,2023-05-06,3.73,White,2000,3.5mm Jack,iOS,Specific,SUP-101,Reinforced Case
+SKU-LAP-1002,UltraLink Laptop 102,UltraLink,Laptops,Laptops Standard,MOD-2002,52.66,6,2023-04-22,3.05,White,4000,HDMI,,Specific,SUP-103,Reinforced Case
+SKU-HEA-1003,UltraLink Headphone 103,UltraLink,Headphones,Headphones Standard,MOD-2003,276.22,24,2024-02-19,3.52,Space Gray,2000,Lightning,,Specific,SUP-104,Blister Pack
+SKU-SMA-1004,PixelCraft Smartwatche 104,PixelCraft,Smartwatches,Smartwatches Standard,MOD-2004,1149.3,24,2023-02-22,0.57,Space Gray,2000,Bluetooth,,iOS/Android,SUP-109,Pouch
+SKU-CHA-1005,AeroTech Charger 105,AeroTech,Chargers,Chargers Standard,MOD-2005,879.73,6,2024-05-13,0.49,Space Gray,0,Bluetooth,,iOS/Android,SUP-113,Reinforced Case
+SKU-POW-1006,OmniGear Power Bank 106,OmniGear,Power Banks,Power Banks Standard,MOD-2006,699.16,6,2023-01-24,4.93,Silver,4000,Micro-USB,,Specific,SUP-113,Box
+SKU-TVS-1007,UltraLink TV 107,UltraLink,TVs,TVs Standard,MOD-2007,344.4,24,2023-03-25,1.84,Space Gray,0,Micro-USB,,Specific,SUP-111,Box
+SKU-TAB-1008,VoltMax Tablet 108,VoltMax,Tablets,Tablets Standard,MOD-2008,647.96,12,2023-03-25,3.47,Silver,5000,3.5mm Jack,Android,Specific,SUP-110,Pouch
+SKU-CAM-1009,AeroTech Camera 109,AeroTech,Cameras,Cameras Standard,MOD-2009,286.42,6,2024-02-17,2.07,Midnight Black,0,Micro-USB,,Specific,SUP-103,Reinforced Case
+SKU-KEY-1010,OmniGear Keyboard 110,OmniGear,Keyboards,Keyboards Standard,MOD-2010,266.96,36,2023-07-22,2.35,Space Gray,0,3.5mm Jack,,Specific,SUP-102,Blister Pack
+SKU-MIC-1011,NexusCore Mice 111,NexusCore,Mice,Mice Standard,MOD-2011,900.21,36,2024-04-04,2.06,Silver,0,HDMI,,Specific,SUP-102,Reinforced Case
+SKU-SPE-1012,Zenith Speaker 112,Zenith,Speakers,Speakers Standard,MOD-2012,122.73,6,2024-03-16,3.17,Ocean Blue,2000,Lightning,,Specific,SUP-109,Box
+SKU-CAB-1013,UltraLink Cable 113,UltraLink,Cables,Cables Standard,MOD-2013,467.22,36,2023-09-28,4.86,Midnight Black,0,Micro-USB,,Specific,SUP-110,Box
+SKU-ROU-1014,NexusCore Router 114,NexusCore,Routers,Routers Standard,MOD-2014,925.79,24,2023-02-27,2.23,Ocean Blue,0,Micro-USB,,Specific,SUP-100,Pouch
+SKU-GAM-1015,VoltMax Gaming Accessorie 115,VoltMax,Gaming Accessories,Gaming Accessories Standard,MOD-2015,616.6,6,2024-03-21,1.56,White,0,3.5mm Jack,,Specific,SUP-109,Blister Pack
+SKU-SMA-1016,VoltMax Smartphone 116,VoltMax,Smartphones,Smartphones Standard,MOD-2016,458.09,12,2023-10-04,1.69,Midnight Black,2000,HDMI,Android,Specific,SUP-101,Pouch
+SKU-LAP-1017,NexusCore Laptop 117,NexusCore,Laptops,Laptops Standard,MOD-2017,298.75,12,2024-03-25,3.69,Midnight Black,2000,USB-C,,Universal,SUP-112,Reinforced Case
+SKU-HEA-1018,VoltMax Headphone 118,VoltMax,Headphones,Headphones Standard,MOD-2018,167.14,36,2024-04-29,2.69,White,4000,Micro-USB,,Specific,SUP-106,Blister Pack
+SKU-SMA-1019,PixelCraft Smartwatche 119,PixelCraft,Smartwatches,Smartwatches Standard,MOD-2019,859.84,36,2023-12-10,4.51,Ocean Blue,5000,Bluetooth,,iOS/Android,SUP-101,Blister Pack
+SKU-CHA-1020,PixelCraft Charger 120,PixelCraft,Chargers,Chargers Standard,MOD-2020,90.87,6,2023-10-29,1.23,Silver,0,HDMI,,Specific,SUP-100,Box
+SKU-POW-1021,AeroTech Power Bank 121,AeroTech,Power Banks,Power Banks Standard,MOD-2021,286.3,6,2024-03-16,2.62,Space Gray,5000,USB-C,,Universal,SUP-110,Eco Carton
+SKU-TVS-1022,PixelCraft TV 122,PixelCraft,TVs,TVs Standard,MOD-2022,653.99,36,2023-05-05,4.06,Silver,0,Bluetooth,,iOS/Android,SUP-101,Box
+SKU-TAB-1023,UltraLink Tablet 123,UltraLink,Tablets,Tablets Standard,MOD-2023,434.84,36,2023-08-28,3.3,Midnight Black,2000,3.5mm Jack,Android,Specific,SUP-100,Eco Carton
+SKU-CAM-1024,OmniGear Camera 124,OmniGear,Cameras,Cameras Standard,MOD-2024,963.7,6,2023-05-08,1.03,Ocean Blue,0,Lightning,,Specific,SUP-102,Eco Carton
+SKU-KEY-1025,VoltMax Keyboard 125,VoltMax,Keyboards,Keyboards Standard,MOD-2025,345.08,12,2024-03-23,2.27,White,0,USB-C,,Universal,SUP-101,Box
+SKU-MIC-1026,AeroTech Mice 126,AeroTech,Mice,Mice Standard,MOD-2026,1163.26,12,2023-03-27,2.48,Silver,0,Bluetooth,,iOS/Android,SUP-113,Eco Carton
+SKU-SPE-1027,AeroTech Speaker 127,AeroTech,Speakers,Speakers Standard,MOD-2027,210.09,6,2023-07-19,1.5,White,5000,Bluetooth,,iOS/Android,SUP-110,Eco Carton
+SKU-CAB-1028,VoltMax Cable 128,VoltMax,Cables,Cables Standard,MOD-2028,240.03,12,2024-05-10,2.94,White,0,USB-C,,Universal,SUP-100,Pouch
+SKU-ROU-1029,AeroTech Router 129,AeroTech,Routers,Routers Standard,MOD-2029,74.42,36,2023-09-15,0.87,White,0,HDMI,,Specific,SUP-101,Blister Pack
+SKU-GAM-1030,SonicWave Gaming Accessorie 130,SonicWave,Gaming Accessories,Gaming Accessories Standard,MOD-2030,720.12,12,2023-07-26,4.71,White,0,USB-C,,Universal,SUP-103,Reinforced Case
+SKU-SMA-1031,AeroTech Smartphone 131,AeroTech,Smartphones,Smartphones Standard,MOD-2031,748.97,36,2023-12-03,1.1,Space Gray,5000,Micro-USB,Android,Specific,SUP-103,Pouch
+SKU-LAP-1032,UltraLink Laptop 132,UltraLink,Laptops,Laptops Standard,MOD-2032,170.09,24,2023-08-23,0.15,White,5000,USB-C,,Universal,SUP-109,Box
+SKU-HEA-1033,SonicWave Headphone 133,SonicWave,Headphones,Headphones Standard,MOD-2033,652.1,24,2023-03-09,4.41,Space Gray,5000,USB-C,,Universal,SUP-104,Blister Pack
+SKU-SMA-1034,Zenith Smartwatche 134,Zenith,Smartwatches,Smartwatches Standard,MOD-2034,1002.99,24,2023-11-10,4.1,Space Gray,2000,3.5mm Jack,,Specific,SUP-114,Box
+SKU-CHA-1035,VoltMax Charger 135,VoltMax,Chargers,Chargers Standard,MOD-2035,328.39,6,2024-01-16,0.86,Space Gray,0,HDMI,,Specific,SUP-109,Blister Pack
+SKU-POW-1036,OmniGear Power Bank 136,OmniGear,Power Banks,Power Banks Standard,MOD-2036,256.26,24,2023-09-16,4.54,Midnight Black,10000,Micro-USB,,Specific,SUP-101,Eco Carton
+SKU-TVS-1037,NexusCore TV 137,NexusCore,TVs,TVs Standard,MOD-2037,67.24,24,2024-01-30,3.22,Space Gray,0,Lightning,,Specific,SUP-102,Eco Carton
+SKU-TAB-1038,UltraLink Tablet 138,UltraLink,Tablets,Tablets Standard,MOD-2038,679.67,6,2023-02-08,0.28,Space Gray,4000,HDMI,Android,Specific,SUP-109,Reinforced Case
+SKU-CAM-1039,VoltMax Camera 139,VoltMax,Cameras,Cameras Standard,MOD-2039,524.3,6,2023-06-07,4.51,Midnight Black,0,Micro-USB,,Specific,SUP-114,Pouch
+SKU-KEY-1040,PixelCraft Keyboard 140,PixelCraft,Keyboards,Keyboards Standard,MOD-2040,823.25,6,2023-07-01,4.43,Ocean Blue,0,HDMI,,Specific,SUP-109,Blister Pack
+SKU-MIC-1041,PixelCraft Mice 141,PixelCraft,Mice,Mice Standard,MOD-2041,1039.56,12,2024-03-27,0.22,Space Gray,0,Bluetooth,,iOS/Android,SUP-112,Eco Carton
+SKU-SPE-1042,PixelCraft Speaker 142,PixelCraft,Speakers,Speakers Standard,MOD-2042,331.16,6,2023-07-15,1.19,Ocean Blue,2000,Bluetooth,,iOS/Android,SUP-105,Pouch
+SKU-CAB-1043,PixelCraft Cable 143,PixelCraft,Cables,Cables Standard,MOD-2043,279.16,12,2023-07-24,1.47,Midnight Black,0,Micro-USB,,Specific,SUP-112,Pouch
+SKU-ROU-1044,OmniGear Router 144,OmniGear,Routers,Routers Standard,MOD-2044,775.16,36,2023-12-14,1.72,Midnight Black,0,HDMI,,Specific,SUP-101,Pouch
+SKU-GAM-1045,VoltMax Gaming Accessorie 145,VoltMax,Gaming Accessories,Gaming Accessories Standard,MOD-2045,703.0,24,2023-01-20,3.02,Space Gray,0,USB-C,,Universal,SUP-111,Pouch
+SKU-SMA-1046,UltraLink Smartphone 146,UltraLink,Smartphones,Smartphones Standard,MOD-2046,733.36,6,2023-07-17,0.32,Ocean Blue,4000,Micro-USB,Android,Specific,SUP-100,Reinforced Case
+SKU-LAP-1047,PixelCraft Laptop 147,PixelCraft,Laptops,Laptops Standard,MOD-2047,446.6,6,2024-04-30,1.64,Midnight Black,5000,HDMI,,Specific,SUP-111,Pouch
+SKU-HEA-1048,NexusCore Headphone 148,NexusCore,Headphones,Headphones Standard,MOD-2048,805.27,24,2023-07-26,0.72,Ocean Blue,5000,HDMI,,Specific,SUP-110,Eco Carton
+SKU-SMA-1049,VoltMax Smartwatche 149,VoltMax,Smartwatches,Smartwatches Standard,MOD-2049,744.39,24,2023-07-27,1.51,Ocean Blue,2000,Micro-USB,,Specific,SUP-112,Reinforced Case
+SKU-CHA-1050,OmniGear Charger 150,OmniGear,Chargers,Chargers Standard,MOD-2050,566.01,36,2023-12-12,2.6,Silver,0,Lightning,,Specific,SUP-110,Box
+SKU-POW-1051,NexusCore Power Bank 151,NexusCore,Power Banks,Power Banks Standard,MOD-2051,625.81,24,2023-02-17,1.62,Silver,4000,3.5mm Jack,,Specific,SUP-102,Box
+SKU-TVS-1052,AeroTech TV 152,AeroTech,TVs,TVs Standard,MOD-2052,305.14,36,2023-11-09,2.33,White,0,USB-C,,Universal,SUP-103,Eco Carton
+SKU-TAB-1053,Zenith Tablet 153,Zenith,Tablets,Tablets Standard,MOD-2053,488.59,12,2023-12-02,1.17,White,2000,Bluetooth,Android,iOS/Android,SUP-107,Box
+SKU-CAM-1054,PixelCraft Camera 154,PixelCraft,Cameras,Cameras Standard,MOD-2054,1102.2,6,2023-08-22,4.03,White,0,Lightning,,Specific,SUP-108,Reinforced Case
+SKU-KEY-1055,OmniGear Keyboard 155,OmniGear,Keyboards,Keyboards Standard,MOD-2055,1140.8,36,2023-11-10,4.47,Ocean Blue,0,3.5mm Jack,,Specific,SUP-113,Reinforced Case
+SKU-MIC-1056,Zenith Mice 156,Zenith,Mice,Mice Standard,MOD-2056,1078.19,36,2023-08-19,3.78,Space Gray,0,Micro-USB,,Specific,SUP-112,Reinforced Case
+SKU-SPE-1057,Zenith Speaker 157,Zenith,Speakers,Speakers Standard,MOD-2057,757.7,24,2023-08-14,1.5,Space Gray,2000,3.5mm Jack,,Specific,SUP-105,Pouch
+SKU-CAB-1058,SonicWave Cable 158,SonicWave,Cables,Cables Standard,MOD-2058,178.97,12,2023-07-16,0.85,Silver,0,3.5mm Jack,,Specific,SUP-101,Eco Carton
+SKU-ROU-1059,UltraLink Router 159,UltraLink,Routers,Routers Standard,MOD-2059,407.09,36,2023-08-01,1.11,Ocean Blue,0,USB-C,,Universal,SUP-106,Reinforced Case
+SKU-GAM-1060,AeroTech Gaming Accessorie 160,AeroTech,Gaming Accessories,Gaming Accessories Standard,MOD-2060,1030.23,36,2023-09-02,4.72,Space Gray,0,USB-C,,Universal,SUP-112,Eco Carton
+SKU-SMA-1061,UltraLink Smartphone 161,UltraLink,Smartphones,Smartphones Standard,MOD-2061,652.79,12,2023-09-07,0.24,Space Gray,10000,Bluetooth,iOS,iOS/Android,SUP-110,Eco Carton
+SKU-LAP-1062,VoltMax Laptop 162,VoltMax,Laptops,Laptops Standard,MOD-2062,1011.0,12,2023-11-15,3.0,Midnight Black,2000,Bluetooth,,iOS/Android,SUP-101,Eco Carton
+SKU-HEA-1063,VoltMax Headphone 163,VoltMax,Headphones,Headphones Standard,MOD-2063,1042.22,12,2023-01-26,1.7,Ocean Blue,5000,Bluetooth,,iOS/Android,SUP-105,Pouch
+SKU-SMA-1064,UltraLink Smartwatche 164,UltraLink,Smartwatches,Smartwatches Standard,MOD-2064,344.73,36,2023-05-10,0.19,White,2000,Bluetooth,,iOS/Android,SUP-100,Pouch
+SKU-CHA-1065,PixelCraft Charger 165,PixelCraft,Chargers,Chargers Standard,MOD-2065,785.42,6,2024-01-22,4.75,Silver,0,USB-C,,Universal,SUP-113,Box
+SKU-POW-1066,VoltMax Power Bank 166,VoltMax,Power Banks,Power Banks Standard,MOD-2066,297.68,36,2023-12-09,4.74,Ocean Blue,2000,HDMI,,Specific,SUP-111,Pouch
+SKU-TVS-1067,OmniGear TV 167,OmniGear,TVs,TVs Standard,MOD-2067,213.83,6,2024-02-03,4.83,Midnight Black,0,Lightning,,Specific,SUP-109,Box
+SKU-TAB-1068,NexusCore Tablet 168,NexusCore,Tablets,Tablets Standard,MOD-2068,697.32,36,2023-07-23,3.0,Silver,4000,USB-C,Android,Universal,SUP-101,Pouch
+SKU-CAM-1069,SonicWave Camera 169,SonicWave,Cameras,Cameras Standard,MOD-2069,958.53,6,2023-06-27,2.2,Space Gray,0,HDMI,,Specific,SUP-101,Reinforced Case
+SKU-KEY-1070,OmniGear Keyboard 170,OmniGear,Keyboards,Keyboards Standard,MOD-2070,29.99,36,2024-02-26,0.62,Space Gray,0,Bluetooth,,iOS/Android,SUP-110,Eco Carton
+SKU-MIC-1071,VoltMax Mice 171,VoltMax,Mice,Mice Standard,MOD-2071,531.05,24,2023-11-12,3.9,Ocean Blue,0,HDMI,,Specific,SUP-106,Reinforced Case
+SKU-SPE-1072,NexusCore Speaker 172,NexusCore,Speakers,Speakers Standard,MOD-2072,396.93,12,2024-03-01,4.42,Silver,2000,Micro-USB,,Specific,SUP-112,Eco Carton
+SKU-CAB-1073,UltraLink Cable 173,UltraLink,Cables,Cables Standard,MOD-2073,413.63,36,2024-03-11,0.99,Silver,0,Micro-USB,,Specific,SUP-105,Pouch
+SKU-ROU-1074,OmniGear Router 174,OmniGear,Routers,Routers Standard,MOD-2074,346.4,24,2023-10-12,2.63,Silver,0,USB-C,,Universal,SUP-101,Blister Pack
+SKU-GAM-1075,UltraLink Gaming Accessorie 175,UltraLink,Gaming Accessories,Gaming Accessories Standard,MOD-2075,593.96,12,2023-12-20,3.26,Ocean Blue,0,Bluetooth,,iOS/Android,SUP-107,Box
+SKU-SMA-1076,SonicWave Smartphone 176,SonicWave,Smartphones,Smartphones Standard,MOD-2076,363.67,36,2023-12-21,2.81,Space Gray,5000,Bluetooth,iOS,iOS/Android,SUP-106,Reinforced Case
+SKU-LAP-1077,OmniGear Laptop 177,OmniGear,Laptops,Laptops Standard,MOD-2077,431.9,36,2023-05-19,1.23,Silver,5000,Micro-USB,,Specific,SUP-105,Box
+SKU-HEA-1078,VoltMax Headphone 178,VoltMax,Headphones,Headphones Standard,MOD-2078,241.98,36,2023-05-22,4.18,Space Gray,5000,USB-C,,Universal,SUP-103,Pouch
+SKU-SMA-1079,VoltMax Smartwatche 179,VoltMax,Smartwatches,Smartwatches Standard,MOD-2079,373.19,12,2023-05-21,2.81,Silver,2000,USB-C,,Universal,SUP-110,Eco Carton
+SKU-CHA-1080,SonicWave Charger 180,SonicWave,Chargers,Chargers Standard,MOD-2080,1049.17,24,2023-08-29,2.26,Silver,0,Bluetooth,,iOS/Android,SUP-100,Pouch
+SKU-POW-1081,Zenith Power Bank 181,Zenith,Power Banks,Power Banks Standard,MOD-2081,150.19,6,2023-07-25,2.93,Midnight Black,10000,USB-C,,Universal,SUP-102,Blister Pack
+SKU-TVS-1082,NexusCore TV 182,NexusCore,TVs,TVs Standard,MOD-2082,115.94,12,2023-03-02,3.85,White,0,HDMI,,Specific,SUP-109,Reinforced Case
+SKU-TAB-1083,PixelCraft Tablet 183,PixelCraft,Tablets,Tablets Standard,MOD-2083,934.2,36,2023-08-19,4.95,Space Gray,5000,HDMI,Android,Specific,SUP-109,Reinforced Case
+SKU-CAM-1084,AeroTech Camera 184,AeroTech,Cameras,Cameras Standard,MOD-2084,737.41,6,2024-04-30,3.17,Space Gray,0,Lightning,,Specific,SUP-110,Box
+SKU-KEY-1085,VoltMax Keyboard 185,VoltMax,Keyboards,Keyboards Standard,MOD-2085,299.24,6,2023-03-22,2.1,White,0,USB-C,,Universal,SUP-107,Pouch
+SKU-MIC-1086,AeroTech Mice 186,AeroTech,Mice,Mice Standard,MOD-2086,289.3,24,2023-12-26,0.45,Silver,0,Bluetooth,,iOS/Android,SUP-114,Pouch
+SKU-SPE-1087,PixelCraft Speaker 187,PixelCraft,Speakers,Speakers Standard,MOD-2087,518.79,12,2023-11-28,4.15,Midnight Black,4000,Micro-USB,,Specific,SUP-100,Blister Pack
+SKU-CAB-1088,NexusCore Cable 188,NexusCore,Cables,Cables Standard,MOD-2088,720.13,24,2023-08-13,2.4,Space Gray,0,USB-C,,Universal,SUP-111,Eco Carton
+SKU-ROU-1089,NexusCore Router 189,NexusCore,Routers,Routers Standard,MOD-2089,608.06,36,2023-08-13,3.03,Ocean Blue,0,USB-C,,Universal,SUP-111,Pouch
+SKU-GAM-1090,NexusCore Gaming Accessorie 190,NexusCore,Gaming Accessories,Gaming Accessories Standard,MOD-2090,45.65,12,2024-05-07,4.2,White,0,3.5mm Jack,,Specific,SUP-109,Box
+SKU-SMA-1091,NexusCore Smartphone 191,NexusCore,Smartphones,Smartphones Standard,MOD-2091,697.85,12,2023-08-29,0.99,White,10000,Micro-USB,Android,Specific,SUP-106,Eco Carton
+SKU-LAP-1092,SonicWave Laptop 192,SonicWave,Laptops,Laptops Standard,MOD-2092,571.96,36,2023-06-20,0.61,Silver,5000,3.5mm Jack,,Specific,SUP-105,Eco Carton
+SKU-HEA-1093,Zenith Headphone 193,Zenith,Headphones,Headphones Standard,MOD-2093,356.54,36,2024-02-21,0.53,Space Gray,2000,Bluetooth,,iOS/Android,SUP-105,Box
+SKU-SMA-1094,UltraLink Smartwatche 194,UltraLink,Smartwatches,Smartwatches Standard,MOD-2094,1039.92,6,2023-12-03,0.37,White,10000,Bluetooth,,iOS/Android,SUP-105,Reinforced Case
+SKU-CHA-1095,Zenith Charger 195,Zenith,Chargers,Chargers Standard,MOD-2095,756.11,6,2023-04-15,2.79,Space Gray,0,Micro-USB,,Specific,SUP-107,Eco Carton
+SKU-POW-1096,SonicWave Power Bank 196,SonicWave,Power Banks,Power Banks Standard,MOD-2096,49.21,12,2023-12-30,2.8,White,4000,Micro-USB,,Specific,SUP-106,Box
+SKU-TVS-1097,PixelCraft TV 197,PixelCraft,TVs,TVs Standard,MOD-2097,1190.82,6,2023-08-25,3.27,Silver,0,USB-C,,Universal,SUP-107,Pouch
+SKU-TAB-1098,NexusCore Tablet 198,NexusCore,Tablets,Tablets Standard,MOD-2098,507.36,36,2023-08-30,1.03,White,4000,Bluetooth,iOS,iOS/Android,SUP-108,Blister Pack
+SKU-CAM-1099,SonicWave Camera 199,SonicWave,Cameras,Cameras Standard,MOD-2099,342.35,36,2023-06-24,1.41,Midnight Black,0,HDMI,,Specific,SUP-104,Pouch
+SKU-KEY-1100,Zenith Keyboard 200,Zenith,Keyboards,Keyboards Standard,MOD-2100,1040.33,36,2023-10-03,1.79,White,0,Bluetooth,,iOS/Android,SUP-112,Reinforced Case
+SKU-MIC-1101,UltraLink Mice 201,UltraLink,Mice,Mice Standard,MOD-2101,554.58,24,2024-03-21,4.91,Silver,0,Lightning,,Specific,SUP-109,Eco Carton
+SKU-SPE-1102,PixelCraft Speaker 202,PixelCraft,Speakers,Speakers Standard,MOD-2102,1029.38,36,2023-01-23,2.42,Ocean Blue,5000,3.5mm Jack,,Specific,SUP-106,Blister Pack
+SKU-CAB-1103,Zenith Cable 203,Zenith,Cables,Cables Standard,MOD-2103,1158.32,12,2023-09-15,1.73,Midnight Black,0,HDMI,,Specific,SUP-113,Eco Carton
+SKU-ROU-1104,SonicWave Router 204,SonicWave,Routers,Routers Standard,MOD-2104,638.25,36,2023-01-08,0.81,Silver,0,3.5mm Jack,,Specific,SUP-101,Eco Carton
+SKU-GAM-1105,NexusCore Gaming Accessorie 205,NexusCore,Gaming Accessories,Gaming Accessories Standard,MOD-2105,416.2,36,2023-11-29,4.27,White,0,USB-C,,Universal,SUP-106,Pouch
+SKU-SMA-1106,Zenith Smartphone 206,Zenith,Smartphones,Smartphones Standard,MOD-2106,1048.77,6,2023-11-13,3.76,Ocean Blue,5000,Lightning,iOS,Specific,SUP-101,Box
+SKU-LAP-1107,Zenith Laptop 207,Zenith,Laptops,Laptops Standard,MOD-2107,212.14,24,2024-04-07,1.69,Midnight Black,2000,USB-C,,Universal,SUP-104,Pouch
+SKU-HEA-1108,OmniGear Headphone 208,OmniGear,Headphones,Headphones Standard,MOD-2108,525.36,12,2023-09-29,3.44,Silver,10000,HDMI,,Specific,SUP-102,Blister Pack
+SKU-SMA-1109,SonicWave Smartwatche 209,SonicWave,Smartwatches,Smartwatches Standard,MOD-2109,737.25,36,2023-11-14,4.57,Silver,4000,Bluetooth,,iOS/Android,SUP-103,Eco Carton
+SKU-CHA-1110,NexusCore Charger 210,NexusCore,Chargers,Chargers Standard,MOD-2110,559.59,6,2024-04-05,4.52,White,0,Bluetooth,,iOS/Android,SUP-102,Box
+SKU-POW-1111,Zenith Power Bank 211,Zenith,Power Banks,Power Banks Standard,MOD-2111,1135.1,24,2023-11-24,1.33,Space Gray,10000,3.5mm Jack,,Specific,SUP-103,Eco Carton
+SKU-TVS-1112,Zenith TV 212,Zenith,TVs,TVs Standard,MOD-2112,141.38,36,2023-10-20,2.92,Space Gray,0,Micro-USB,,Specific,SUP-100,Eco Carton
+SKU-TAB-1113,NexusCore Tablet 213,NexusCore,Tablets,Tablets Standard,MOD-2113,24.6,6,2024-04-11,3.9,Silver,10000,Micro-USB,Android,Specific,SUP-109,Pouch
+SKU-CAM-1114,PixelCraft Camera 214,PixelCraft,Cameras,Cameras Standard,MOD-2114,769.39,24,2023-12-14,3.86,Silver,0,3.5mm Jack,,Specific,SUP-110,Box
+SKU-KEY-1115,AeroTech Keyboard 215,AeroTech,Keyboards,Keyboards Standard,MOD-2115,381.09,36,2023-01-18,1.89,Silver,0,HDMI,,Specific,SUP-101,Pouch
+SKU-MIC-1116,OmniGear Mice 216,OmniGear,Mice,Mice Standard,MOD-2116,900.76,12,2023-04-13,3.95,Space Gray,0,Lightning,,Specific,SUP-108,Reinforced Case
+SKU-SPE-1117,NexusCore Speaker 217,NexusCore,Speakers,Speakers Standard,MOD-2117,999.11,24,2024-04-12,3.76,Space Gray,10000,Micro-USB,,Specific,SUP-112,Box
+SKU-CAB-1118,Zenith Cable 218,Zenith,Cables,Cables Standard,MOD-2118,1156.03,12,2024-01-22,4.31,Ocean Blue,0,Lightning,,Specific,SUP-113,Reinforced Case
+SKU-ROU-1119,OmniGear Router 219,OmniGear,Routers,Routers Standard,MOD-2119,122.01,36,2023-01-08,2.73,Ocean Blue,0,Micro-USB,,Specific,SUP-105,Pouch
+SKU-GAM-1120,UltraLink Gaming Accessorie 220,UltraLink,Gaming Accessories,Gaming Accessories Standard,MOD-2120,989.56,24,2023-02-25,1.25,Midnight Black,0,3.5mm Jack,,Specific,SUP-109,Reinforced Case
+SKU-SMA-1121,OmniGear Smartphone 221,OmniGear,Smartphones,Smartphones Standard,MOD-2121,1099.58,12,2023-11-28,1.58,Ocean Blue,10000,3.5mm Jack,iOS,Specific,SUP-101,Blister Pack
+SKU-LAP-1122,AeroTech Laptop 222,AeroTech,Laptops,Laptops Standard,MOD-2122,1136.32,24,2023-09-10,1.25,White,2000,USB-C,,Universal,SUP-102,Eco Carton
+SKU-HEA-1123,Zenith Headphone 223,Zenith,Headphones,Headphones Standard,MOD-2123,454.65,36,2023-10-28,3.31,Ocean Blue,4000,Bluetooth,,iOS/Android,SUP-109,Eco Carton
+SKU-SMA-1124,NexusCore Smartwatche 224,NexusCore,Smartwatches,Smartwatches Standard,MOD-2124,53.77,24,2023-04-22,4.76,Space Gray,10000,Bluetooth,,iOS/Android,SUP-101,Pouch
+SKU-CHA-1125,OmniGear Charger 225,OmniGear,Chargers,Chargers Standard,MOD-2125,86.75,24,2023-04-08,4.75,Ocean Blue,0,USB-C,,Universal,SUP-101,Blister Pack
+SKU-POW-1126,AeroTech Power Bank 226,AeroTech,Power Banks,Power Banks Standard,MOD-2126,74.94,24,2023-05-05,1.11,White,4000,HDMI,,Specific,SUP-103,Reinforced Case
+SKU-TVS-1127,PixelCraft TV 227,PixelCraft,TVs,TVs Standard,MOD-2127,978.47,12,2023-06-18,3.96,White,0,Lightning,,Specific,SUP-100,Pouch
+SKU-TAB-1128,VoltMax Tablet 228,VoltMax,Tablets,Tablets Standard,MOD-2128,1185.22,24,2024-02-13,0.17,Silver,2000,Lightning,iOS,Specific,SUP-109,Pouch
+SKU-CAM-1129,AeroTech Camera 229,AeroTech,Cameras,Cameras Standard,MOD-2129,221.48,6,2023-03-06,2.16,Midnight Black,0,3.5mm Jack,,Specific,SUP-111,Box
+SKU-KEY-1130,Zenith Keyboard 230,Zenith,Keyboards,Keyboards Standard,MOD-2130,546.21,24,2023-09-20,0.63,White,0,HDMI,,Specific,SUP-103,Reinforced Case
+SKU-MIC-1131,AeroTech Mice 231,AeroTech,Mice,Mice Standard,MOD-2131,876.78,24,2023-08-23,4.82,Midnight Black,0,3.5mm Jack,,Specific,SUP-107,Eco Carton
+SKU-SPE-1132,UltraLink Speaker 232,UltraLink,Speakers,Speakers Standard,MOD-2132,828.03,36,2023-12-31,4.51,Space Gray,10000,USB-C,,Universal,SUP-109,Blister Pack
+SKU-CAB-1133,SonicWave Cable 233,SonicWave,Cables,Cables Standard,MOD-2133,164.54,24,2023-07-15,2.7,Ocean Blue,0,HDMI,,Specific,SUP-108,Reinforced Case
+SKU-ROU-1134,UltraLink Router 234,UltraLink,Routers,Routers Standard,MOD-2134,132.53,6,2024-03-12,3.29,White,0,3.5mm Jack,,Specific,SUP-111,Blister Pack
+SKU-GAM-1135,UltraLink Gaming Accessorie 235,UltraLink,Gaming Accessories,Gaming Accessories Standard,MOD-2135,550.09,12,2023-07-31,4.15,Ocean Blue,0,Micro-USB,,Specific,SUP-106,Box
+SKU-SMA-1136,OmniGear Smartphone 236,OmniGear,Smartphones,Smartphones Standard,MOD-2136,520.72,24,2023-07-11,0.55,Midnight Black,10000,USB-C,Android,Universal,SUP-101,Eco Carton
+SKU-LAP-1137,SonicWave Laptop 237,SonicWave,Laptops,Laptops Standard,MOD-2137,897.34,24,2024-02-20,0.39,White,4000,HDMI,,Specific,SUP-108,Pouch
+SKU-HEA-1138,SonicWave Headphone 238,SonicWave,Headphones,Headphones Standard,MOD-2138,501.81,36,2024-03-20,3.04,Space Gray,2000,Micro-USB,,Specific,SUP-101,Reinforced Case
+SKU-SMA-1139,PixelCraft Smartwatche 239,PixelCraft,Smartwatches,Smartwatches Standard,MOD-2139,198.36,36,2023-04-25,4.24,Space Gray,2000,Micro-USB,,Specific,SUP-101,Pouch
+SKU-CHA-1140,PixelCraft Charger 240,PixelCraft,Chargers,Chargers Standard,MOD-2140,971.56,6,2023-11-08,4.16,Space Gray,0,3.5mm Jack,,Specific,SUP-100,Blister Pack
+SKU-POW-1141,NexusCore Power Bank 241,NexusCore,Power Banks,Power Banks Standard,MOD-2141,847.7,24,2024-04-16,0.13,Silver,5000,Micro-USB,,Specific,SUP-109,Eco Carton
+SKU-TVS-1142,SonicWave TV 242,SonicWave,TVs,TVs Standard,MOD-2142,183.12,6,2023-02-16,2.7,Ocean Blue,0,3.5mm Jack,,Specific,SUP-106,Eco Carton
+SKU-TAB-1143,OmniGear Tablet 243,OmniGear,Tablets,Tablets Standard,MOD-2143,201.53,24,2024-01-05,0.86,White,2000,USB-C,iOS,Universal,SUP-100,Box
+SKU-CAM-1144,NexusCore Camera 244,NexusCore,Cameras,Cameras Standard,MOD-2144,540.09,36,2023-09-06,2.27,Space Gray,0,HDMI,,Specific,SUP-103,Reinforced Case
+SKU-KEY-1145,SonicWave Keyboard 245,SonicWave,Keyboards,Keyboards Standard,MOD-2145,424.03,6,2023-05-26,3.42,Ocean Blue,0,3.5mm Jack,,Specific,SUP-108,Pouch
+SKU-MIC-1146,AeroTech Mice 246,AeroTech,Mice,Mice Standard,MOD-2146,276.31,6,2023-01-04,1.58,Silver,0,Lightning,,Specific,SUP-112,Blister Pack
+SKU-SPE-1147,NexusCore Speaker 247,NexusCore,Speakers,Speakers Standard,MOD-2147,357.99,6,2023-01-04,2.21,Silver,10000,3.5mm Jack,,Specific,SUP-106,Reinforced Case
+SKU-CAB-1148,PixelCraft Cable 248,PixelCraft,Cables,Cables Standard,MOD-2148,607.81,24,2023-02-06,4.32,Midnight Black,0,Bluetooth,,iOS/Android,SUP-106,Box
+SKU-ROU-1149,Zenith Router 249,Zenith,Routers,Routers Standard,MOD-2149,1106.58,24,2023-10-22,2.91,Ocean Blue,0,Bluetooth,,iOS/Android,SUP-104,Box
+SKU-GAM-1150,UltraLink Gaming Accessorie 250,UltraLink,Gaming Accessories,Gaming Accessories Standard,MOD-2150,39.72,24,2023-03-29,2.35,Space Gray,0,HDMI,,Specific,SUP-101,Eco Carton

@@ -1,0 +1,91 @@
+return_reasons:
+  PRODUCT_DEFECT:
+    description: "Hardware defect, component failure, or manufacturing fault"
+    default_root_cause: "PRODUCT"
+    default_preventable: "YES"
+    default_owner: "Product Team"
+    default_severity: "HIGH"
+
+  SHIPPING_DAMAGE:
+    description: "Physical damage caused during transit"
+    default_root_cause: "LOGISTICS"
+    default_preventable: "YES"
+    default_owner: "Logistics"
+    default_severity: "MEDIUM"
+
+  PACKAGING_ISSUE:
+    description: "Inadequate, compromised, or torn packaging"
+    default_root_cause: "LOGISTICS"
+    default_preventable: "YES"
+    default_owner: "Warehouse"
+    default_severity: "LOW"
+
+  MISSING_ACCESSORY:
+    description: "Included charger, cable, manual, or accessory missing from box"
+    default_root_cause: "PRODUCT"
+    default_preventable: "YES"
+    default_owner: "Supplier"
+    default_severity: "MEDIUM"
+
+  LISTING_MISMATCH:
+    description: "Product specs, images, or features mismatch listing details"
+    default_root_cause: "CONTENT"
+    default_preventable: "YES"
+    default_owner: "Content Team"
+    default_severity: "HIGH"
+
+  COMPATIBILITY_ISSUE:
+    description: "Product incompatible with customer's existing hardware/OS"
+    default_root_cause: "CONTENT"
+    default_preventable: "YES"
+    default_owner: "Content Team"
+    default_severity: "MEDIUM"
+
+  SETUP_DIFFICULTY:
+    description: "Customer struggled with initial setup or unclear instructions"
+    default_root_cause: "CONTENT"
+    default_preventable: "YES"
+    default_owner: "Customer Support"
+    default_severity: "LOW"
+
+  CUSTOMER_ORDER_ERROR:
+    description: "Customer mistakenly purchased incorrect SKU or model"
+    default_root_cause: "CUSTOMER"
+    default_preventable: "NO"
+    default_owner: "Customer"
+    default_severity: "LOW"
+
+  CUSTOMER_DAMAGE:
+    description: "Accidental drop, spill, or improper usage by customer"
+    default_root_cause: "CUSTOMER"
+    default_preventable: "NO"
+    default_owner: "Customer"
+    default_severity: "MEDIUM"
+
+  PERFORMANCE_EXPECTATION:
+    description: "Product works as designed but didn't meet subjective expectation"
+    default_root_cause: "CONTENT"
+    default_preventable: "YES"
+    default_owner: "Content Team"
+    default_severity: "LOW"
+
+  WARRANTY_FAILURE:
+    description: "Device breakdown after regular use within warranty window"
+    default_root_cause: "PRODUCT"
+    default_preventable: "YES"
+    default_owner: "Product Team"
+    default_severity: "HIGH"
+
+  NO_FAULT_FOUND:
+    description: "Returned item tested fully functional with no issues reproduced"
+    default_root_cause: "OPERATIONS"
+    default_preventable: "UNCERTAIN"
+    default_owner: "Customer Support"
+    default_severity: "LOW"
+
+  OTHER:
+    description: "Unclassified or general reason"
+    default_root_cause: "UNKNOWN"
+    default_preventable: "UNCERTAIN"
+    default_owner: "Unknown"
+    default_severity: "LOW"

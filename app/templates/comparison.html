@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Operations Benchmark - Return Insight{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <h3 class="fw-bold m-0">Normal vs Disruption Operations Benchmark</h3>
+    <p class="text-muted m-0">Comparative experiment across operational disruption scenarios</p>
+  </div>
+</div>
+
+<div class="row g-4 mb-4">
+  {% for sc in scenarios %}
+  <div class="col-md-6">
+    <div class="card card-custom {% if sc.Scenario == 'NORMAL' %}border-success{% else %}border-warning{% endif %}">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="fw-bold m-0">Scenario: {{ sc.Scenario }}</h5>
+        <span class="badge {% if sc.Scenario == 'NORMAL' %}bg-success{% else %}bg-warning text-dark{% endif %}">
+          {{ sc.Scenario }}
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="row g-2">
+          <div class="col-6"><strong>Total Returns:</strong> {{ sc['Total Returns'] }}</div>
+          <div class="col-6"><strong>Processing Capacity:</strong> {{ sc['Avg Processing Capacity'] }}</div>
+          <div class="col-6"><strong>Avg Processing Time:</strong> {{ sc['Avg Processing Time (min)'] }} min</div>
+          <div class="col-6"><strong>Avg Backlog:</strong> {{ sc['Avg Backlog Size'] }}</div>
+          <div class="col-6"><strong>Shipping Damage %:</strong> {{ sc['Shipping Damage %'] }}%</div>
+          <div class="col-6"><strong>Preventable Return %:</strong> {{ sc['Preventable Return %'] }}%</div>
+          <div class="col-6"><strong>High Priority Alerts:</strong> {{ sc['High Priority Alerts'] }}</div>
+          <div class="col-6"><strong>Refund Exposure:</strong> ${{ sc['Total Refund Exposure ($)'] }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Returns List - Return Insight{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h3 class="fw-bold m-0">Customer Returns & Warranty Claims</h3>
+  <a href="/analyser" class="btn btn-primary"><i class="fa-solid fa-plus me-1"></i> New Analysis</a>
+</div>
+
+<div class="card card-custom">
+  <div class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle m-0">
+        <thead class="table-light">
+          <tr>
+            <th>Return ID</th>
+            <th>SKU</th>
+            <th>Return Text</th>
+            <th>Predicted Reason</th>
+            <th>Confidence</th>
+            <th>Preventable</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in returns %}
+          <tr>
+            <td class="fw-bold"><a href="/returns/{{ r.return_id }}">{{ r.return_id }}</a></td>
+            <td>{{ r.sku }}</td>
+            <td class="text-truncate" style="max-width: 250px;">{{ r.return_text }}</td>
+            <td><span class="badge bg-secondary">{{ r.predicted_reason }}</span></td>
+            <td>{{ (r.confidence * 100)|round(1) }}%</td>
+            <td>
+              {% if r.preventable == 'YES' %}
+                <span class="badge badge-yes">YES</span>
+              {% elif r.preventable == 'NO' %}
+                <span class="badge badge-no">NO</span>
+              {% else %}
+                <span class="badge badge-uncertain">UNCERTAIN</span>
+              {% endif %}
+            </td>
+            <td><span class="badge badge-p1">{{ r.priority }}</span></td>
+            <td><span class="badge bg-info text-dark">{{ r.review_status }}</span></td>
+            <td><a href="/returns/{{ r.return_id }}" class="btn btn-sm btn-outline-primary">View Case</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Return Case Detail - Return Insight{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <a href="/returns" class="text-decoration-none text-muted mb-2 d-inline-block"><i class="fa-solid fa-arrow-left me-1"></i> Back to Returns</a>
+    <h3 class="fw-bold m-0">Case Detail: {{ return.return_id }}</h3>
+  </div>
+  <div>
+    <span class="badge badge-p1 fs-6 me-2">{{ prediction.priority }} Priority</span>
+    <span class="badge bg-primary fs-6">{{ prediction.predicted_reason }}</span>
+  </div>
+</div>
+
+<div class="row g-4">
+  <!-- Left Column: Customer Report & AI Assessment -->
+  <div class="col-md-7">
+    <!-- Customer Report Card -->
+    <div class="card card-custom">
+      <div class="card-header bg-light">
+        <h6 class="m-0 fw-bold"><i class="fa-solid fa-user me-2 text-primary"></i>Customer Return Statement</h6>
+      </div>
+      <div class="card-body">
+        <p class="lead font-monospace bg-light p-3 rounded">"{{ return.return_text }}"</p>
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Customer Reason:</strong> {{ return.customer_selected_reason }}</p>
+            <p><strong>Refund Amount:</strong> ${{ return.refund_amount }}</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Days Since Purchase:</strong> {{ return.days_since_purchase }} days</p>
+            <p><strong>Store Channel:</strong> {{ return.store_channel }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-Source Evidence Card -->
+    <div class="card card-custom">
+      <div class="card-header bg-light">
+        <h6 class="m-0 fw-bold"><i class="fa-solid fa-magnifying-glass me-2 text-info"></i>Multi-Source Evidence Package</h6>
+      </div>
+      <div class="card-body">
+        <p><strong>Agreement Ratio:</strong> <span class="badge bg-success">{{ evidence.agreement_ratio if evidence else 'N/A' }}</span></p>
+        <h6 class="fw-bold mt-3">Supporting Evidence Signals:</h6>
+        <ul>
+          {% if evidence and evidence.evidence_signals %}
+            {% for sig in evidence.evidence_signals %}
+              <li>{{ sig }}</li>
+            {% endfor %}
+          {% else %}
+            <li>Text matches domain keyword patterns.</li>
+          {% endif %}
+        </ul>
+        {% if evidence and evidence.conflict_signals %}
+          <div class="alert alert-warning">
+            <strong>Conflicting Evidence Signals:</strong>
+            <ul>
+              {% for csig in evidence.conflict_signals %}
+                <li>{{ csig }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Column: AI Assessment & Product Metadata -->
+  <div class="col-md-5">
+    <div class="card card-custom border-primary">
+      <div class="card-header bg-primary text-white">
+        <h6 class="m-0 fw-bold"><i class="fa-solid fa-robot me-2"></i>AI Prediction Assessment</h6>
+      </div>
+      <div class="card-body">
+        <p><strong>Predicted Reason:</strong> {{ prediction.predicted_reason }}</p>
+        <p><strong>Confidence Score:</strong> {{ (prediction.confidence * 100)|round(1) }}%</p>
+        <p><strong>Root Cause Group:</strong> {{ prediction.root_cause_group }}</p>
+        <p><strong>Preventable Return:</strong> <span class="badge badge-yes">{{ prediction.preventable }}</span></p>
+        <p><strong>Recommended Owner:</strong> {{ prediction.recommended_owner }}</p>
+        <p><strong>Priority Score:</strong> {{ prediction.priority_score }} / 100</p>
+        <hr/>
+        <h6>Recommended Action:</h6>
+        <p class="text-muted small">{{ prediction.recommended_action }}</p>
+      </div>
+    </div>
+
+    <!-- Product & Listing Info Card -->
+    <div class="card card-custom">
+      <div class="card-header bg-light">
+        <h6 class="m-0 fw-bold"><i class="fa-solid fa-box me-2"></i>Product & Listing Specifications</h6>
+      </div>
+      <div class="card-body">
+        <p><strong>SKU:</strong> {{ return.sku }}</p>
+        <p><strong>Product Name:</strong> {{ product.product_name if product else 'N/A' }}</p>
+        <p><strong>Category:</strong> {{ product.product_category if product else 'N/A' }}</p>
+        <p><strong>Listing Quality Score:</strong> {{ listing.content_quality_score if listing else '0.85' }}</p>
+        <p><strong>Compatibility Info Present:</strong> {{ listing.compatibility_information_present if listing else True }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

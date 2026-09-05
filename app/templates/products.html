@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Product Intelligence - Return Insight{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <h3 class="fw-bold m-0">SKU Root Cause Intelligence</h3>
+    <p class="text-muted m-0">Risk-ranked SKU return analysis and content/quality recommendations</p>
+  </div>
+</div>
+
+<div class="card card-custom">
+  <div class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle m-0">
+        <thead class="table-light">
+          <tr>
+            <th>SKU</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Return Count</th>
+            <th>Dominant Reason</th>
+            <th>Preventable %</th>
+            <th>Total Refund Cost</th>
+            <th>Action Required</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in sku_list %}
+          <tr>
+            <td class="fw-bold">{{ s.sku }}</td>
+            <td>{{ s.product_name }}</td>
+            <td><span class="badge bg-light text-dark border">{{ s.category }}</span></td>
+            <td><span class="badge bg-danger">{{ s.return_count }}</span></td>
+            <td><span class="badge bg-primary">{{ s.dominant_reason }}</span></td>
+            <td class="text-success fw-bold">{{ s.preventable_pct }}%</td>
+            <td>${{ s.total_refund|round(2) }}</td>
+            <td>
+              {% if s.dominant_reason == 'PRODUCT_DEFECT' %}
+                <span class="badge bg-danger">Audit Supplier</span>
+              {% elif s.dominant_reason == 'COMPATIBILITY_ISSUE' or s.dominant_reason == 'LISTING_MISMATCH' %}
+                <span class="badge bg-warning text-dark">Update Listing</span>
+              {% else %}
+                <span class="badge bg-secondary">Monitor</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

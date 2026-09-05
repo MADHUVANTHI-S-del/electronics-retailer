@@ -1,0 +1,27 @@
+app:
+  name: "Return Insight"
+  version: "1.0.0"
+  environment: "development"
+  debug: true
+
+data:
+  random_seed: 42
+  num_returns: 12000
+  raw_dir: "data/raw"
+  cleaned_dir: "data/cleaned"
+  processed_dir: "data/processed"
+  samples_dir: "data/samples"
+
+models:
+  save_dir: "models"
+  vectorizer_max_features: 5000
+  ngram_range: [1, 2]
+  test_size: 0.15
+  val_size: 0.15
+
+priority_weights:
+  severity: 0.30
+  frequency: 0.25
+  financial: 0.20
+  preventability: 0.15
+  confidence: 0.10

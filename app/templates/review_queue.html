@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Review Queue - Return Insight{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <h3 class="fw-bold m-0">Dispatcher & Operations Manager Review Queue</h3>
+    <p class="text-muted m-0">Human-in-the-loop triage for low-confidence or conflicting-evidence cases</p>
+  </div>
+</div>
+
+<div class="row g-4">
+  {% for item in queue %}
+  <div class="col-md-6">
+    <div class="card card-custom">
+      <div class="card-header bg-light d-flex justify-content-between align-items-center">
+        <span class="fw-bold">Return ID: {{ item.return_id }}</span>
+        <span class="badge bg-warning text-dark">{{ item.review_status }}</span>
+      </div>
+      <div class="card-body">
+        <p class="small text-muted font-monospace bg-light p-2 rounded">"{{ item.return_text }}"</p>
+        <p><strong>Predicted Reason:</strong> <span class="badge bg-primary">{{ item.predicted_reason }}</span> ({{ (item.confidence * 100)|round(1) }}%)</p>
+        <p><strong>Root Cause Group:</strong> {{ item.root_cause_group }}</p>
+        <p><strong>Preventable:</strong> {{ item.preventable }}</p>
+        
+        <!-- Evidence -->
+        <h6 class="fw-bold fs-7">Evidence Signals:</h6>
+        <ul class="small">
+          {% for sig in item.evidence_signals %}
+            <li>{{ sig }}</li>
+          {% endfor %}
+        </ul>
+
+        <!-- Human Action Form -->
+        <form onsubmit="submitReview(event, '{{ item.return_id }}')" class="border-top pt-3 mt-3">
+          <div class="row g-2 mb-2">
+            <div class="col-md-6">
+              <select name="decision" class="form-select form-select-sm" required>
+                <option value="ACCEPTED">ACCEPT Prediction</option>
+                <option value="OVERRIDDEN">OVERRIDE Prediction</option>
+                <option value="ESCALATED">ESCALATE Case</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <input type="text" name="corrected_label" class="form-control form-control-sm" placeholder="Corrected Label (if override)">
+            </div>
+          </div>
+          <div class="mb-2">
+            <input type="text" name="review_notes" class="form-control form-control-sm" placeholder="Reviewer notes..." required>
+          </div>
+          <button type="submit" class="btn btn-sm btn-success w-100"><i class="fa-solid fa-check me-1"></i> Submit Review</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div class="col-12">
+    <div class="alert alert-success"><i class="fa-solid fa-circle-check me-2"></i>Review queue is clean! No cases pending manual triage.</div>
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+async function submitReview(e, returnId) {
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+  data.return_id = returnId;
+  data.reviewer = "ops_manager_01";
+
+  try {
+    const res = await fetch("/api/reviews", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+    alert("Review submitted successfully for " + returnId);
+    window.location.reload();
+  } catch (err) {
+    alert("Error submitting review: " + err);
+  }
+}
+</script>
+{% endblock %}

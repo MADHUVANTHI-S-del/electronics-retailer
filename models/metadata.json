@@ -1,0 +1,23 @@
+{
+  "model_name": "Model 6: Combined Text + Structured Logistic Regression",
+  "trained_date": "2026-09-05 12:21:36",
+  "classes": [
+    "COMPATIBILITY_ISSUE",
+    "CUSTOMER_DAMAGE",
+    "CUSTOMER_ORDER_ERROR",
+    "LISTING_MISMATCH",
+    "MISSING_ACCESSORY",
+    "NO_FAULT_FOUND",
+    "OTHER",
+    "PACKAGING_ISSUE",
+    "PERFORMANCE_EXPECTATION",
+    "PRODUCT_DEFECT",
+    "SETUP_DIFFICULTY",
+    "SHIPPING_DAMAGE",
+    "WARRANTY_FAILURE"
+  ],
+  "optimal_threshold": 0.5,
+  "test_accuracy": 0.9994,
+  "test_macro_f1": 0.9993,
+  "random_seed": 42
+}

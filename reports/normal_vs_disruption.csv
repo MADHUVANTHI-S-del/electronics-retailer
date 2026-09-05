@@ -1,0 +1,5 @@
+Scenario,Total Returns,Avg Processing Capacity,Avg Processing Time (min),Avg Backlog Size,Shipping Damage %,Preventable Return %,High Priority Alerts,Total Refund Exposure ($)
+CAPACITY_LOSS,1222,35.0,33.5,71.4,8.6,84.0,496,725688.22
+DELIVERY_DELAY,1318,60.0,18.2,33.9,7.2,85.1,519,780789.55
+NORMAL,8242,60.0,14.8,12.5,8.5,86.0,3170,4905614.77
+URGENT_DEMAND,1186,70.0,24.5,95.5,7.8,87.3,484,709292.44

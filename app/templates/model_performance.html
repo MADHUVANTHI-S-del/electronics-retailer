@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Model Performance - Return Insight{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <h3 class="fw-bold m-0">Machine Learning Model Performance & Error Analysis</h3>
+    <p class="text-muted m-0">Candidate model comparison, threshold tuning, and error analysis</p>
+  </div>
+</div>
+
+<!-- Candidate Model Matrix Table -->
+<div class="card card-custom mb-4">
+  <div class="card-header bg-light">
+    <h6 class="m-0 fw-bold"><i class="fa-solid fa-table me-2 text-primary"></i>Model Benchmark Comparison Matrix</h6>
+  </div>
+  <div class="card-body p-0">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle m-0">
+        <thead class="table-light">
+          <tr>
+            <th>Model</th>
+            <th>Accuracy</th>
+            <th>Macro Precision</th>
+            <th>Macro Recall</th>
+            <th>Macro F1</th>
+            <th>Weighted F1</th>
+            <th>Training Time</th>
+            <th>Interpretability</th>
+            <th>Selected</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for m in models %}
+          <tr class="{% if m.Selected %}table-success fw-bold{% endif %}">
+            <td>{{ m.Model }}</td>
+            <td>{{ (m.Accuracy * 100)|round(1) }}%</td>
+            <td>{{ (m['Macro Precision'] * 100)|round(1) }}%</td>
+            <td>{{ (m['Macro Recall'] * 100)|round(1) }}%</td>
+            <td>{{ m['Macro F1'] }}</td>
+            <td>{{ m['Weighted F1'] }}</td>
+            <td>{{ m['Training Time'] }}s</td>
+            <td>{{ m.Interpretability }}</td>
+            <td>
+              {% if m.Selected %}
+                <span class="badge bg-success">SELECTED FINAL</span>
+              {% else %}
+                <span class="badge bg-secondary">CANDIDATE</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- False Positive / False Negative Error Analysis Cards -->
+<div class="row g-4">
+  <div class="col-md-6">
+    <div class="card card-custom border-start border-4 border-warning">
+      <div class="card-header bg-light">
+        <h6 class="m-0 fw-bold"><i class="fa-solid fa-bug text-warning me-2"></i>False Positive Analysis (FP)</h6>
+      </div>
+      <div class="card-body">
+        <p><strong>Example FP Scenario:</strong> Model predicts <code>PRODUCT_DEFECT</code> but physical inspection outcome is <code>No Fault Found</code>.</p>
+        <p class="small text-muted"><strong>Root Cause of Error:</strong> Customer return text contained words like "doesn't work" or "stopped", causing text classifier to infer defect despite product testing 100% functional.</p>
+        <p class="small"><strong>System Mitigation:</strong> Post-inspection evidence validator flags conflicting evidence and sends case to manual review queue.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card card-custom border-start border-4 border-danger">
+      <div class="card-header bg-light">
+        <h6 class="m-0 fw-bold"><i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>False Negative Analysis (FN)</h6>
+      </div>
+      <div class="card-body">
+        <p><strong>Example FN Scenario:</strong> Model predicts <code>CUSTOMER_ORDER_ERROR</code> but actual issue is recurring battery batch hardware failure.</p>
+        <p class="small text-muted"><strong>Root Cause of Error:</strong> Customer selected ambiguous category "changed mind" or provided vague description.</p>
+        <p class="small"><strong>System Mitigation:</strong> SKU anomaly detection engine detects return volume spike (>2.5x baseline) and generates P1 alert regardless of text classification.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
